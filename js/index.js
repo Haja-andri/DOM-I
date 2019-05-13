@@ -53,8 +53,17 @@ let mySelector4 = document.querySelector('#cta-img');
 
 const cta = document.querySelector('#cta-img');
 cta.setAttribute('src', siteContent['cta']['img-src']);
-console.log(cta);
+//console.log(cta);
 
 const middleImg = document.querySelector('#middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
-console.log(middleImg);
+//console.log(middleImg);
+
+// Updating the nav section
+
+let nav = document.querySelectorAll('nav a');
+//nav.forEach(e => {e.textContent = siteContent['nav'][nav-item-1]});
+nav.forEach(function(element, index){
+  element.textContent = siteContent['nav']['nav-item-'+ index];
+});
+console.log(nav);
