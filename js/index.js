@@ -52,11 +52,10 @@ let mySelector4 = document.querySelector('#cta-img');
 
 const cta = document.querySelector('#cta-img');
 cta.setAttribute('src', siteContent['cta']['img-src']);
-//console.log(cta);
+
 
 const middleImg = document.querySelector('#middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
-//console.log(middleImg);
 
 // Updating the nav section
 
@@ -66,19 +65,16 @@ nav.forEach(function(element, index){
   element.textContent = siteContent['nav']['nav-item-'+ ++index];
   element.setAttribute('style', 'color: green'); 
 });
-//console.log(nav);
 
 // Update for H1
 let h1 = document.querySelector('h1');
 h1.textContent = siteContent['cta']['h1'];
-//console.log(h1);
 
 // Update for Buttom
 let button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
-//console.log(h1);
 
-// Update for H4
+// Update for H4 and Paragraphe for text-content section
 let HP = document.getElementsByClassName('text-content')
 
 HP[0].children[0].textContent = siteContent['main-content']['features-h4'];
@@ -97,7 +93,6 @@ HP[4].children[0].textContent = siteContent['main-content']['vision-h4'];
 HP[4].children[1].textContent = siteContent['main-content']['vision-content'];
 
 // Update for H4
-
 let contact = document.querySelector('.contact');
 contact.children[0].textContent = siteContent['contact']['contact-h4'];
 contact.children[1].textContent = siteContent['contact']['address'];
@@ -105,10 +100,8 @@ contact.children[2].textContent = siteContent['contact']['phone'];
 contact.children[3].textContent = siteContent['contact']['email'];
 
 // Update for footer
-//let footer = document.getElementsByName('footer p');
 let footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
-//console.log(footer);
 
 let newNavAnchor1 = document.createElement('a');
 newNavAnchor1.textContent = 'last Nav';
@@ -123,4 +116,3 @@ newNavAnchor2.style = 'color: green';
 const navBar = document.querySelector('nav')
 navBar.appendChild(newNavAnchor1);
 navBar.prepend(newNavAnchor2);
-//console.log(newNavAnchor);
