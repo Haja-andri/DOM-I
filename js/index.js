@@ -95,4 +95,12 @@ HP[3].children[1].textContent = siteContent['main-content']['product-content'];
 HP[4].children[0].textContent = siteContent['main-content']['vision-h4'];
 HP[4].children[1].textContent = siteContent['main-content']['vision-content'];
 
-console.log(HP[0].children[0]);
+// Update for H4
+
+let contact = document.querySelector('.contact');
+contact.children[0].textContent = siteContent['contact']['contact-h4'];
+contact.children[1].textContent = siteContent['contact']['address'];
+contact.children[2].textContent = siteContent['contact']['phone'];
+contact.children[3].textContent = siteContent['contact']['email'];
+
+//console.log(contact.children[0]);
