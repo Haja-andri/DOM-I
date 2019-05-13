@@ -63,10 +63,9 @@ middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 let nav = document.querySelectorAll('nav a');
 //nav.forEach(e => {e.textContent = siteContent['nav'][nav-item-1]});
 nav.forEach(function(element, index){
-  element.textContent = siteContent['nav']['nav-item-'+ index];
-  element.setAttribute('style', 'color: green');;
+  element.textContent = siteContent['nav']['nav-item-'+ ++index];
+  element.setAttribute('style', 'color: green'); 
 });
-//nav.setAttribute('style', 'color: green');
 //console.log(nav);
 
 // Update for H1
@@ -110,3 +109,18 @@ contact.children[3].textContent = siteContent['contact']['email'];
 let footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
 //console.log(footer);
+
+let newNavAnchor1 = document.createElement('a');
+newNavAnchor1.textContent = 'last Nav';
+newNavAnchor1.href = 'http//:somewhere';
+newNavAnchor1.style = 'color: green';
+
+let newNavAnchor2 = document.createElement('a');
+newNavAnchor2.textContent = 'First Nav';
+newNavAnchor2.href = 'http//:somewhere';
+newNavAnchor2.style = 'color: green';
+
+const navBar = document.querySelector('nav')
+navBar.appendChild(newNavAnchor1);
+navBar.prepend(newNavAnchor2);
+//console.log(newNavAnchor);
