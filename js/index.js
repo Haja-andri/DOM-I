@@ -64,7 +64,9 @@ let nav = document.querySelectorAll('nav a');
 //nav.forEach(e => {e.textContent = siteContent['nav'][nav-item-1]});
 nav.forEach(function(element, index){
   element.textContent = siteContent['nav']['nav-item-'+ index];
+  element.setAttribute('style', 'color: green');;
 });
+//nav.setAttribute('style', 'color: green');
 //console.log(nav);
 
 // Update for H1
@@ -103,4 +105,8 @@ contact.children[1].textContent = siteContent['contact']['address'];
 contact.children[2].textContent = siteContent['contact']['phone'];
 contact.children[3].textContent = siteContent['contact']['email'];
 
-//console.log(contact.children[0]);
+// Update for footer
+//let footer = document.getElementsByName('footer p');
+let footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright'];
+//console.log(footer);
