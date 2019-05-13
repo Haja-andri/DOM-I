@@ -40,7 +40,6 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-console.log(logo);
 
 // Task 1 create a selector
 
@@ -70,5 +69,30 @@ nav.forEach(function(element, index){
 
 // Update for H1
 let h1 = document.querySelector('h1');
-h1.textContent = 'DOM<br> Is<br> Awesome';
-console.log(h1);
+h1.textContent = siteContent['cta']['h1'];
+//console.log(h1);
+
+// Update for Buttom
+let button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
+//console.log(h1);
+
+// Update for H4
+let HP = document.getElementsByClassName('text-content')
+
+HP[0].children[0].textContent = siteContent['main-content']['features-h4'];
+HP[0].children[1].textContent = siteContent['main-content']['features-content'];
+
+HP[1].children[0].textContent = siteContent['main-content']['about-h4'];
+HP[1].children[1].textContent = siteContent['main-content']['about-content'];
+
+HP[2].children[0].textContent = siteContent['main-content']['services-h4'];
+HP[2].children[1].textContent = siteContent['main-content']['services-content'];
+
+HP[3].children[0].textContent = siteContent['main-content']['product-h4'];
+HP[3].children[1].textContent = siteContent['main-content']['product-content'];
+
+HP[4].children[0].textContent = siteContent['main-content']['vision-h4'];
+HP[4].children[1].textContent = siteContent['main-content']['vision-content'];
+
+console.log(HP[0].children[0]);
