@@ -66,4 +66,9 @@ let nav = document.querySelectorAll('nav a');
 nav.forEach(function(element, index){
   element.textContent = siteContent['nav']['nav-item-'+ index];
 });
-console.log(nav);
+//console.log(nav);
+
+// Update for H1
+let h1 = document.querySelector('h1');
+h1.textContent = 'DOM<br> Is<br> Awesome';
+console.log(h1);
